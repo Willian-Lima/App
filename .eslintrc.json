@@ -1,0 +1,22 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "standard-with-typescript", "prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-native"],
+  "rules": {
+    // PERMITE ESCREVER JSX EM ARQUIVOS JS
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
+    "no-use-before-define": ["error", { "variables": false }],
+
+    // AJUSTAR PARA NÃO PASSAR ERROS COM O REACT-NAVIGATION
+    "react/prop-types": ["error", { "ignore": ["navigation", "navigation.navigate"] }]
+  }
+}
