@@ -29,7 +29,7 @@ const Text = ({ color, type, ...props }: TextProps) => {
       case textTypes.BUTTON_BOLD:
       case textTypes.BUTTON_LIGHT:
       case textTypes.BUTTON_REGULAR:
-        return '10px';
+        return '18px';
         break;
       case textTypes.PARAGRAPH_BOLD:
       case textTypes.PARAGRAPH_LIGHT:

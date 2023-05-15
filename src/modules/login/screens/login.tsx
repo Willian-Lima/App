@@ -2,6 +2,7 @@ import { View, Text, TextInput } from 'react-native';
 import { ContainerLogin } from '../styles/login.style';
 import Input from '../../../shared/components/input/Input';
 import Button from '../../../shared/components/button/Button';
+import { theme } from '../../../shared/themes/themes';
 
 const Login = () => {
   const handleOnPress = () => {
@@ -12,7 +13,7 @@ const Login = () => {
       <ContainerLogin>
         <Text>Texto</Text>
         <Input />
-        <Button margin="8px" title="Entrar" />
+        <Button type={theme.buttons.buttonsTheme.primary} margin="8px" title="Entrar" />
       </ContainerLogin>
     </View>
   );
