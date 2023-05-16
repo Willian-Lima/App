@@ -13,7 +13,12 @@ const Login = () => {
       <ContainerLogin>
         <Text>Texto</Text>
         <Input />
-        <Button type={theme.buttons.buttonsTheme.primary} margin="8px" title="Entrar" />
+        <Button
+          type={theme.buttons.buttonsTheme.primary}
+          margin="8px"
+          title="Entrar"
+          onPress={handleOnPress}
+        />
       </ContainerLogin>
     </View>
   );
