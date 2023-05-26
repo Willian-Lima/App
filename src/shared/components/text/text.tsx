@@ -6,9 +6,10 @@ import { useMemo } from 'react';
 interface TextProps extends TextPropsNative {
   color?: string;
   type?: string;
+  margin?: string;
 }
 
-const Text = ({ color, type, ...props }: TextProps) => {
+const Text = ({ color, type, margin, ...props }: TextProps) => {
   const fontSize = useMemo(() => {
     switch (type) {
       case textTypes.TITLE_BOLD:
@@ -71,6 +72,7 @@ const Text = ({ color, type, ...props }: TextProps) => {
       fontFamily={fontFamily}
       fontSize={fontSize}
       color={color}
+      customMargin={margin}
       {...props}
     ></ContainerText>
   );
