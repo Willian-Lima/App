@@ -7,9 +7,10 @@ import { theme } from '../../themes/themes';
 
 interface InputProps extends TextInputProps {
   title?: string;
+  errorMessage?: string;
 }
 
-const Input = ({ title, ...props }: InputProps) => {
+const Input = ({ errorMessage, title, ...props }: InputProps) => {
   return (
     <DisplayFlexColumn>
       {title && (
@@ -21,7 +22,16 @@ const Input = ({ title, ...props }: InputProps) => {
           {title}
         </Text>
       )}
-      <ContainerInput {...props} />
+      <ContainerInput isError={!!errorMessage} {...props} />
+      {errorMessage && (
+        <Text
+          margin="2px 0px 0px 8px"
+          type={textTypes.PARAGRAPH_SMALL_REGULAR}
+          color={theme.colors.orangeTheme.orange80}
+        >
+          {errorMessage}
+        </Text>
+      )}
     </DisplayFlexColumn>
   );
 };
