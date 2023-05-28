@@ -13,7 +13,8 @@ const Login = () => {
     <View>
       <ContainerLogin>
         <Icon name="home3" color="blue" size={50} />
-        <Input placeholder="Digite seu Email" title="Email:" />
+        <Input margin="0px 0px 8px 0px" placeholder="Digite seu Email" title="Email:" />
+        <Input secureTextEntry={true} placeholder="Digite sua Senha" title="Senha:" />
         <Button
           type={theme.buttons.buttonsTheme.primary}
           margin="8px"
